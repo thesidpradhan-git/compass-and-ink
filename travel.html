@@ -11,6 +11,7 @@ permalink: /travel/
 
 <section class="wrap">
   {% assign travel_posts = site.posts | where_exp: "p", "p.categories contains 'travel'" %}
+  {% if travel_posts.size > 0 %}
   <div class="post-grid" style="padding-top: 2.5rem;">
     {% for post in travel_posts %}
       {% if forloop.first %}
@@ -20,4 +21,7 @@ permalink: /travel/
       {% endif %}
     {% endfor %}
   </div>
+  {% else %}
+  <p class="empty-state">No travel pieces yet — check back soon.</p>
+  {% endif %}
 </section>

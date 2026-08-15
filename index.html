@@ -16,39 +16,49 @@ title: Home
   </p>
 </section>
 
-{% assign featured = site.posts | first %}
-{% assign travel_posts = site.posts | where_exp: "p", "p.categories contains 'travel'" | where_exp: "p", "p.url != featured.url" %}
-{% assign essay_posts = site.posts | where_exp: "p", "p.categories contains 'essays'" | where_exp: "p", "p.url != featured.url" %}
+{% if site.posts.size > 0 %}
+  {% assign featured = site.posts | first %}
+  {% assign travel_posts = site.posts | where_exp: "p", "p.categories contains 'travel'" | where_exp: "p", "p.url != featured.url" %}
+  {% assign essay_posts = site.posts | where_exp: "p", "p.categories contains 'essays'" | where_exp: "p", "p.url != featured.url" %}
 
-<section class="wrap">
-  <div class="section-heading">
-    <h2>Latest</h2>
-  </div>
-  <div class="post-grid">
-    {% include post-card.html post=featured size="featured" %}
-  </div>
-</section>
+  <section class="wrap">
+    <div class="section-heading">
+      <h2>Latest</h2>
+    </div>
+    <div class="post-grid">
+      {% include post-card.html post=featured size="featured" %}
+    </div>
+  </section>
 
-<section class="wrap">
-  <div class="section-heading">
-    <h2>Travel</h2>
-    <a href="{{ '/travel/' | relative_url }}">All travel pieces →</a>
-  </div>
-  <div class="post-grid post-grid--pair">
-    {% for post in travel_posts limit: 2 %}
-      {% include post-card.html post=post size="regular" %}
-    {% endfor %}
-  </div>
-</section>
+  {% if travel_posts.size > 0 %}
+  <section class="wrap">
+    <div class="section-heading">
+      <h2>Travel</h2>
+      <a href="{{ '/travel/' | relative_url }}">All travel pieces →</a>
+    </div>
+    <div class="post-grid post-grid--pair">
+      {% for post in travel_posts limit: 2 %}
+        {% include post-card.html post=post size="regular" %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 
-<section class="wrap">
-  <div class="section-heading">
-    <h2>Essays</h2>
-    <a href="{{ '/essays/' | relative_url }}">All essays →</a>
-  </div>
-  <div class="post-grid post-grid--pair">
-    {% for post in essay_posts limit: 2 %}
-      {% include post-card.html post=post size="regular" %}
-    {% endfor %}
-  </div>
-</section>
+  {% if essay_posts.size > 0 %}
+  <section class="wrap">
+    <div class="section-heading">
+      <h2>Essays</h2>
+      <a href="{{ '/essays/' | relative_url }}">All essays →</a>
+    </div>
+    <div class="post-grid post-grid--pair">
+      {% for post in essay_posts limit: 2 %}
+        {% include post-card.html post=post size="regular" %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+{% else %}
+  <section class="wrap empty-state">
+    <p>Nothing published yet — the first dispatch is on its way.</p>
+  </section>
+{% endif %}
