@@ -266,6 +266,57 @@ h1, h2, h3, h4 {
   font-weight: 400;
 }
 
+/* ---------- author intro ---------- */
+.author-intro {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-block: clamp(1.5rem, 4vw, 2.25rem);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.author-intro__mark {
+  flex-shrink: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  border: 1.5px dashed var(--color-travel);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-travel);
+  transform: rotate(-6deg);
+}
+
+.author-intro__bio {
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 62ch;
+}
+
+.author-intro__bio strong {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.author-intro__handle {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-ink-faint);
+}
+
+.author-intro__bio a {
+  margin-left: 0.4em;
+  white-space: nowrap;
+  color: var(--color-travel);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
 /* ---------- section headings ---------- */
 .section-heading {
   display: flex;

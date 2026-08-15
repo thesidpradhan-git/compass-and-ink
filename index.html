@@ -8,17 +8,24 @@ title: Home
   <p class="hero__lede">{{ site.description }}</p>
 </section>
 
-{% assign travel_posts = site.posts | where_exp: "p", "p.categories contains 'travel'" %}
-{% assign essay_posts = site.posts | where_exp: "p", "p.categories contains 'essays'" %}
+<section class="author-intro wrap">
+  <span class="author-intro__mark" aria-hidden="true">SP</span>
+  <p class="author-intro__bio">
+    <strong>{{ site.author }}</strong> <span class="author-intro__handle">{{ site.handle }}</span> {{ site.author_bio }}
+    <a href="{{ '/about/' | relative_url }}">More about this project →</a>
+  </p>
+</section>
+
 {% assign featured = site.posts | first %}
-{% assign rest = site.posts | slice: 1, 4 %}
+{% assign travel_posts = site.posts | where_exp: "p", "p.categories contains 'travel'" | where_exp: "p", "p.url != featured.url" %}
+{% assign essay_posts = site.posts | where_exp: "p", "p.categories contains 'essays'" | where_exp: "p", "p.url != featured.url" %}
 
 <section class="wrap">
+  <div class="section-heading">
+    <h2>Latest</h2>
+  </div>
   <div class="post-grid">
     {% include post-card.html post=featured size="featured" %}
-    {% for post in rest %}
-      {% include post-card.html post=post size="regular" %}
-    {% endfor %}
   </div>
 </section>
 
