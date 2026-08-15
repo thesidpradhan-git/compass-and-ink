@@ -525,6 +525,16 @@ h1, h2, h3, h4 {
   margin-bottom: 1.6em;
 }
 
+.post-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2.2em auto;
+  box-shadow:
+    0 0 0 7px var(--color-bg-raised),
+    0 0 0 8px var(--color-line-strong);
+}
+
 .post-content > p:first-of-type::first-letter {
   font-family: var(--font-display);
   font-style: italic;
