@@ -1,0 +1,43 @@
+title: Compass & Ink
+tagline: Stories from the road, and the arguments they started
+description: >-
+  A travel and ideas journal — dispatches from the road paired with essays
+  on the beliefs, borders, and ideologies travel keeps putting in front of you.
+author: Sid Pradhan
+email: thesidpradhan@gmail.com
+baseurl: ""
+url: ""
+lang: en_US
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+
+future: false

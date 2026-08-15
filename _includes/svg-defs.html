@@ -1,0 +1,12 @@
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"></feTurbulence>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.05 0"></feColorMatrix>
+    <feComposite operator="over" in2="SourceGraphic"></feComposite>
+  </filter>
+  <filter id="grain-strong">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch" result="noise"></feTurbulence>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.09 0"></feColorMatrix>
+    <feComposite operator="over" in2="SourceGraphic"></feComposite>
+  </filter>
+</svg>

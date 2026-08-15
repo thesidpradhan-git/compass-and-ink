@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="site-logo" href="{{ '/' | relative_url }}">
+      <span class="site-logo__mark">{% include compass.html class="icon-compass" %}</span>
+      <span class="site-logo__text">{{ site.title }}</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="{{ '/travel/' | relative_url }}" class="{% if page.url contains '/travel' %}is-active{% endif %}">Travel</a>
+      <a href="{{ '/essays/' | relative_url }}" class="{% if page.url contains '/essays' %}is-active{% endif %}">Essays</a>
+      <a href="{{ '/about/' | relative_url }}" class="{% if page.url contains '/about' %}is-active{% endif %}">About</a>
+    </nav>
+
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" data-theme-toggle>
+      <span class="theme-toggle__icon">◐</span>
+    </button>
+  </div>
+</header>

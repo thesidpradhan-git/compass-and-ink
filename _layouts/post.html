@@ -1,0 +1,58 @@
+---
+layout: default
+---
+{% assign cat = page.categories | first %}
+<article class="post post--{{ cat }}">
+  <header class="post-header" style="--accent: {{ page.accent | default: '#a8402c' }}; --accent2: {{ page.accent2 | default: '#f3d9c4' }};">
+    <div class="post-header__art" aria-hidden="true">
+      <span class="post-header__watermark">{% include compass.html class="icon-compass-giant" %}</span>
+    </div>
+    <div class="post-header__stamp" aria-hidden="true">
+      <span class="post-header__stamp-glyph">{{ page.glyph | default: "❖" }}</span>
+      <svg class="post-header__stamp-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/></svg>
+    </div>
+    <div class="wrap post-header__inner">
+      <a class="tag tag--{{ cat }}" href="{{ '/' | append: cat | append: '/' | relative_url }}">{{ cat }}</a>
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+      <div class="post-meta">
+        {% if page.location %}<span class="post-meta__location">{{ page.location }}</span><span aria-hidden="true">·</span>{% endif %}
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        <span aria-hidden="true">·</span>
+        <span>{{ content | number_of_words | divided_by: 200 | at_least: 1 }} min read</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap wrap--narrow">
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      {% for tag in page.tags %}<span class="post-tags__item">#{{ tag }}</span>{% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="post-author">
+      <span class="post-author__mark">{% include compass.html class="icon-compass" %}</span>
+      <div>
+        <strong>{{ site.author }}</strong>
+        <p>Writes about places, and the beliefs found lying around in them. <a href="{{ '/about/' | relative_url }}">More about this project →</a></p>
+      </div>
+    </div>
+  </div>
+</article>
+
+{% assign related = site.posts | where_exp: "p", "p.categories contains cat" | where_exp: "p", "p.url != page.url" | sample: 2 %}
+{% if related.size > 0 %}
+<section class="related wrap">
+  <h2 class="related__heading">More {{ cat }} pieces</h2>
+  <div class="post-grid post-grid--pair">
+    {% for post in related %}
+      {% include post-card.html post=post size="regular" %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

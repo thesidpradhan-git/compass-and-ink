@@ -1,0 +1,47 @@
+---
+layout: default
+title: Home
+---
+<section class="hero wrap">
+  <span class="hero__eyebrow">Dispatches &amp; arguments, since 2025</span>
+  <h1 class="hero__title">Notes from the road, and the <em>ideas</em> it wouldn't stop arguing with.</h1>
+  <p class="hero__lede">{{ site.description }}</p>
+</section>
+
+{% assign travel_posts = site.posts | where_exp: "p", "p.categories contains 'travel'" %}
+{% assign essay_posts = site.posts | where_exp: "p", "p.categories contains 'essays'" %}
+{% assign featured = site.posts | first %}
+{% assign rest = site.posts | slice: 1, 4 %}
+
+<section class="wrap">
+  <div class="post-grid">
+    {% include post-card.html post=featured size="featured" %}
+    {% for post in rest %}
+      {% include post-card.html post=post size="regular" %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-heading">
+    <h2>Travel</h2>
+    <a href="{{ '/travel/' | relative_url }}">All travel pieces →</a>
+  </div>
+  <div class="post-grid post-grid--pair">
+    {% for post in travel_posts limit: 2 %}
+      {% include post-card.html post=post size="regular" %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-heading">
+    <h2>Essays</h2>
+    <a href="{{ '/essays/' | relative_url }}">All essays →</a>
+  </div>
+  <div class="post-grid post-grid--pair">
+    {% for post in essay_posts limit: 2 %}
+      {% include post-card.html post=post size="regular" %}
+    {% endfor %}
+  </div>
+</section>

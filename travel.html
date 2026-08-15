@@ -1,0 +1,23 @@
+---
+layout: default
+title: Travel
+permalink: /travel/
+---
+<header class="archive-header wrap">
+  <span class="tag tag--travel">Travel</span>
+  <h1>Somewhere, still unpacking.</h1>
+  <p>Long-form dispatches from places that changed how the road looked afterward — written slow, on purpose.</p>
+</header>
+
+<section class="wrap">
+  {% assign travel_posts = site.posts | where_exp: "p", "p.categories contains 'travel'" %}
+  <div class="post-grid" style="padding-top: 2.5rem;">
+    {% for post in travel_posts %}
+      {% if forloop.first %}
+        {% include post-card.html post=post size="featured" %}
+      {% else %}
+        {% include post-card.html post=post size="regular" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

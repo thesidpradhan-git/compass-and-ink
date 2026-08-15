@@ -1,0 +1,18 @@
+{% assign post = include.post %}
+{% assign size = include.size | default: "regular" %}
+{% assign cat = post.categories | first %}
+<article class="post-card post-card--{{ size }} post-card--{{ cat }}">
+  <a class="post-card__link" href="{{ post.url | relative_url }}">
+    <div class="post-card__art" style="--accent: {{ post.accent | default: '#c1502e' }}; --accent2: {{ post.accent2 | default: '#f3d9c4' }};">
+      <span class="post-card__glyph">{{ post.glyph | default: "❖" }}</span>
+    </div>
+    <div class="post-card__body">
+      <span class="tag tag--{{ cat }}">{{ cat }}</span>
+      <h3 class="post-card__title">{{ post.title }}</h3>
+      <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      <div class="post-card__meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      </div>
+    </div>
+  </a>
+</article>

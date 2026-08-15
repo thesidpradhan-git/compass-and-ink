@@ -1,0 +1,40 @@
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__col">
+      <span class="site-logo__mark">{% include compass.html class="icon-compass" %}</span>
+      <p class="site-footer__tag">{{ site.tagline }}</p>
+    </div>
+
+    <div class="site-footer__col">
+      <span class="site-footer__heading">Read</span>
+      <a href="{{ '/travel/' | relative_url }}">Travel</a>
+      <a href="{{ '/essays/' | relative_url }}">Essays</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+    </div>
+
+    <div class="site-footer__col">
+      <span class="site-footer__heading">Follow</span>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a>
+      <a href="mailto:{{ site.email }}">Email</a>
+    </div>
+  </div>
+  <div class="wrap site-footer__legal">
+    <span>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. Built with Jekyll, set in Fraunces &amp; Literata.</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var stored = localStorage.getItem('theme');
+    if (stored) root.setAttribute('data-theme', stored);
+    var toggle = document.querySelector('[data-theme-toggle]');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', current);
+        localStorage.setItem('theme', current);
+      });
+    }
+  })();
+</script>

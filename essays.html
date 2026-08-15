@@ -1,0 +1,23 @@
+---
+layout: default
+title: Essays
+permalink: /essays/
+---
+<header class="archive-header wrap">
+  <span class="tag tag--essays">Essays</span>
+  <h1>Arguments picked up along the way.</h1>
+  <p>On borders, belief, slowness, and the ideologies that travel keeps putting in front of you — written to be disagreed with.</p>
+</header>
+
+<section class="wrap">
+  {% assign essay_posts = site.posts | where_exp: "p", "p.categories contains 'essays'" %}
+  <div class="post-grid" style="padding-top: 2.5rem;">
+    {% for post in essay_posts %}
+      {% if forloop.first %}
+        {% include post-card.html post=post size="featured" %}
+      {% else %}
+        {% include post-card.html post=post size="regular" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
