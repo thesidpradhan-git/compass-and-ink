@@ -5,8 +5,8 @@ description: >-
   on the beliefs, borders, and ideologies travel keeps putting in front of you.
 author: Sid Pradhan
 email: thesidpradhan@gmail.com
-baseurl: ""
-url: ""
+baseurl: "/compass-and-ink"
+url: "https://thesidpradhan-git.github.io"
 lang: en_US
 
 markdown: kramdown
