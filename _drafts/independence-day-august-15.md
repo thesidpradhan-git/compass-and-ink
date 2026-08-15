@@ -14,7 +14,7 @@ tags:
 > ऐ वतन ऐ वतन आबाद रहे तू
 > ```
 
-Child of screens and scrolling light,\
+![India](https://images.moneycontrol.com/static-mcnews/2025/08/20250825102842_5.jpg)Child of screens and scrolling light,\
 freedom is not just a fight\
 against a flag, a foreign hand —\
 it lives in how you hold your land.
