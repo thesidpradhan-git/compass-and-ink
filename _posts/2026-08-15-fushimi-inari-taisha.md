@@ -10,7 +10,7 @@ location: Kyoto
 tags:
   - japan tori gates
 ---
-![inari](https://github.com/user-attachments/assets/ca749041-0b87-4a81-930e-a24af0aa1da2)
+![Two vermillion torii gates seen from below, forest-green light behind them](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20260'%3E%3Crect%20width='400'%20height='260'%20fill='%232f4a2a'%20opacity='0.12'/%3E%3Crect%20x='142'%20y='70'%20width='14'%20height='150'%20fill='%23c23b22'/%3E%3Crect%20x='244'%20y='70'%20width='14'%20height='150'%20fill='%23c23b22'/%3E%3Crect%20x='112'%20y='54'%20width='176'%20height='16'%20rx='6'%20fill='%23c23b22'/%3E%3Crect%20x='128'%20y='96'%20width='144'%20height='10'%20fill='%23c23b22'/%3E%3C/svg%3E)
 
 By the time I reached the second rest stop, I'd stopped counting gates. The guidebooks all cite the same number — ten thousand, give or take — as if that settles anything. It doesn't. Ten thousand is a statistic. What you actually experience is closer to a tunnel that keeps deciding not to end, vermillion on both sides, close enough to touch, close enough that the light comes through orange even at noon.
 
