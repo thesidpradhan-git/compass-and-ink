@@ -401,6 +401,20 @@ h1, h2, h3, h4 {
   z-index: 0;
 }
 
+.post-card__art--photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.post-card__art--photo::after {
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+}
+
 .post-card__art::before {
   content: "";
   position: absolute;

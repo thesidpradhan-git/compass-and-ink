@@ -10,7 +10,7 @@ location: Kyoto
 tags:
   - japan tori gates
 ---
-![inari](https://github.com/user-attachments/assets/ca749041-0b87-4a81-930e-a24af0aa1da2)---
+![inari](https://github.com/user-attachments/assets/ca749041-0b87-4a81-930e-a24af0aa1da2)
 
 By the time I reached the second rest stop, I'd stopped counting gates. The guidebooks all cite the same number — ten thousand, give or take — as if that settles anything. It doesn't. Ten thousand is a statistic. What you actually experience is closer to a tunnel that keeps deciding not to end, vermillion on both sides, close enough to touch, close enough that the light comes through orange even at noon.
 
