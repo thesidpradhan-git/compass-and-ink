@@ -1,6 +1,6 @@
 ---
 title: "The Tyranny of the Bucket List"
-categories: [essays]
+categories: [opinion]
 excerpt: "A bucket list turns travel into a chore with good branding. I stopped keeping one and started noticing more."
 tags: [ideas, planning, lists]
 ---

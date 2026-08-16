@@ -1,6 +1,6 @@
 ---
 title: "Travel Insurance Is a Philosophy, Not a Product"
-categories: [essays]
+categories: [opinion]
 excerpt: "Buying travel insurance is a small, boring admission that the trip might not go the way you're picturing it."
 tags: [ideas, risk, planning]
 ---

@@ -1,0 +1,23 @@
+---
+layout: default
+title: Photos
+permalink: /photos/
+---
+<header class="archive-header wrap">
+  <span class="tag tag--photos">Photos</span>
+  <h1>What the camera roll would lose otherwise.</h1>
+  <p>Photo memories that didn't need a thousand words — just a place to actually live.</p>
+</header>
+
+<section class="wrap--wide">
+  {% assign photo_posts = site.posts | where_exp: "p", "p.categories contains 'photos'" %}
+  {% if photo_posts.size > 0 %}
+  <div class="post-list">
+    {% for post in photo_posts %}
+      {% include post-card.html post=post size="regular" %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-state">Nothing here yet — check back soon.</p>
+  {% endif %}
+</section>

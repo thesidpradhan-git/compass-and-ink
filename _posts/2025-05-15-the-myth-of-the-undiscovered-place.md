@@ -1,6 +1,6 @@
 ---
 title: "The Myth of the Undiscovered Place"
-categories: [essays]
+categories: [opinion]
 excerpt: "Every place you've ever visited was discovered by someone before you got there. Usually thousands of someones."
 tags: [ideas, tourism, language]
 ---

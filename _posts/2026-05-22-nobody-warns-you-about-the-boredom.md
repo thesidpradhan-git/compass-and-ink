@@ -1,6 +1,6 @@
 ---
 title: "Nobody Warns You About the Boredom"
-categories: [essays]
+categories: [opinion]
 excerpt: "Somewhere around day nine of a long trip, I got bored. Nobody had mentioned that was allowed to happen."
 tags: [ideas, boredom, long-trips]
 ---

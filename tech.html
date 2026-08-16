@@ -1,0 +1,23 @@
+---
+layout: default
+title: Tech
+permalink: /tech/
+---
+<header class="archive-header wrap">
+  <span class="tag tag--tech">Tech</span>
+  <h1>The stack, and why it looks like this.</h1>
+  <p>Tools, decisions, and the occasional regret from whatever's currently being built or broken behind the scenes.</p>
+</header>
+
+<section class="wrap--wide">
+  {% assign tech_posts = site.posts | where_exp: "p", "p.categories contains 'tech'" %}
+  {% if tech_posts.size > 0 %}
+  <div class="post-list">
+    {% for post in tech_posts %}
+      {% include post-card.html post=post size="regular" %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-state">Nothing here yet — check back soon.</p>
+  {% endif %}
+</section>

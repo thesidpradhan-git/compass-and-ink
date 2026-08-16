@@ -1,6 +1,6 @@
 ---
 title: "What Packing Light Actually Teaches You"
-categories: [essays]
+categories: [opinion]
 excerpt: "Down to one bag, I stopped packing for the trip I hoped to have and started packing for the one I was actually taking."
 tags: [ideas, minimalism, packing]
 ---

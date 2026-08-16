@@ -1,23 +1,23 @@
 ---
 layout: default
-title: Essays
-permalink: /essays/
+title: Opinion
+permalink: /opinion/
 ---
 <header class="archive-header wrap">
-  <span class="tag tag--essays">Essays</span>
+  <span class="tag tag--opinion">Opinion</span>
   <h1>Arguments picked up along the way.</h1>
   <p>On borders, belief, slowness, and the ideologies that travel keeps putting in front of you — written to be disagreed with.</p>
 </header>
 
 <section class="wrap--wide">
-  {% assign essay_posts = site.posts | where_exp: "p", "p.categories contains 'essays'" %}
-  {% if essay_posts.size > 0 %}
+  {% assign opinion_posts = site.posts | where_exp: "p", "p.categories contains 'opinion'" %}
+  {% if opinion_posts.size > 0 %}
   <div class="post-list">
-    {% for post in essay_posts %}
+    {% for post in opinion_posts %}
       {% include post-card.html post=post size="regular" %}
     {% endfor %}
   </div>
   {% else %}
-  <p class="empty-state">No essays yet — check back soon.</p>
+  <p class="empty-state">No opinion pieces yet — check back soon.</p>
   {% endif %}
 </section>

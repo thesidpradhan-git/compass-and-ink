@@ -15,7 +15,9 @@
   --color-line-strong: #dcdcdc;
 
   --color-travel: #b1461f;
-  --color-essays: #2f4468;
+  --color-opinion: #2f4468;
+  --color-tech: #5b4b8a;
+  --color-photos: #9c4f6b;
 
   --font-serif: "Literata", Georgia, serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -35,7 +37,9 @@
   --color-line-strong: #3a3a3a;
 
   --color-travel: #e08a63;
-  --color-essays: #93a8d1;
+  --color-opinion: #93a8d1;
+  --color-tech: #a898d4;
+  --color-photos: #d492ac;
 
   color-scheme: dark;
 }
@@ -51,7 +55,9 @@
     --color-line-strong: #3a3a3a;
 
     --color-travel: #e08a63;
-    --color-essays: #93a8d1;
+    --color-opinion: #93a8d1;
+    --color-tech: #a898d4;
+    --color-photos: #d492ac;
 
     color-scheme: dark;
   }
@@ -193,7 +199,9 @@ h1, h2, h3, h4 {
   border: 1px solid currentColor;
 }
 .tag--travel { color: var(--color-travel); }
-.tag--essays { color: var(--color-essays); }
+.tag--opinion { color: var(--color-opinion); }
+.tag--tech { color: var(--color-tech); }
+.tag--photos { color: var(--color-photos); }
 
 /* ---------- hero ---------- */
 .hero {

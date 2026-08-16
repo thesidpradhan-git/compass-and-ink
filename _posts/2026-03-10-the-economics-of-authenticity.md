@@ -1,6 +1,6 @@
 ---
 title: "The Economics of Authenticity"
-categories: [essays]
+categories: [opinion]
 excerpt: "The moment a local experience gets marketed as authentic, it's already started becoming something else."
 tags: [ideas, tourism, economics]
 ---

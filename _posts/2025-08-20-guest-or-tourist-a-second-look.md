@@ -1,6 +1,6 @@
 ---
 title: "Guest or Tourist: A Second Look"
-categories: [essays]
+categories: [opinion]
 excerpt: "I've argued before that the line between guest and customer matters. A year later, I think I drew it too neatly."
 tags: [ideas, hospitality, revisiting]
 ---

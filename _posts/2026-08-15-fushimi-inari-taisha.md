@@ -42,4 +42,4 @@ Three things I'd tell anyone climbing it for real:
 
 ---
 
-I didn't make it to true sunset — the last cable car down the parallel ropeway stops early, and I'd underestimated how long ten thousand gates take when you keep stopping to read the names. But I got far enough up that the tourist noise fell away entirely, far enough that it was just foxes, gates, and the specific quiet of a mountain that's been thanked by strangers for a very long time. If you want the version of Kyoto that isn't waiting for rain to earn its quiet, read [Kyoto in the Wrong Season](/essays/on-slowness/) — this is the same city, arguing with itself in a different key.
+I didn't make it to true sunset — the last cable car down the parallel ropeway stops early, and I'd underestimated how long ten thousand gates take when you keep stopping to read the names. But I got far enough up that the tourist noise fell away entirely, far enough that it was just foxes, gates, and the specific quiet of a mountain that's been thanked by strangers for a very long time.

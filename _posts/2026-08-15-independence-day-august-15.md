@@ -1,7 +1,7 @@
 ---
 title: Independence Day - August 15
 categories:
-  - essays
+  - opinion
 accent: '#2f4468'
 accent2: '#7c8db3'
 glyph: ❖

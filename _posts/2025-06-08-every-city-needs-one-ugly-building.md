@@ -1,6 +1,6 @@
 ---
 title: "Every City Needs One Ugly Building"
-categories: [essays]
+categories: [opinion]
 excerpt: "The prettiest cities I've visited are also the ones that feel the least like anyone actually lives there."
 tags: [ideas, cities, aesthetics]
 ---

@@ -7,7 +7,9 @@
 
     <nav class="site-nav" aria-label="Primary">
       <a href="{{ '/travel/' | relative_url }}" class="{% if page.url contains '/travel' %}is-active{% endif %}">Travel</a>
-      <a href="{{ '/essays/' | relative_url }}" class="{% if page.url contains '/essays' %}is-active{% endif %}">Essays</a>
+      <a href="{{ '/opinion/' | relative_url }}" class="{% if page.url contains '/opinion' %}is-active{% endif %}">Opinion</a>
+      <a href="{{ '/tech/' | relative_url }}" class="{% if page.url contains '/tech' %}is-active{% endif %}">Tech</a>
+      <a href="{{ '/photos/' | relative_url }}" class="{% if page.url contains '/photos' %}is-active{% endif %}">Photos</a>
       <a href="{{ '/about/' | relative_url }}" class="{% if page.url contains '/about' %}is-active{% endif %}">About</a>
     </nav>
 

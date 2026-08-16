@@ -1,6 +1,6 @@
 ---
 title: "The Cult of the Window Seat"
-categories: [essays]
+categories: [opinion]
 excerpt: "I used to think aisle people just hadn't thought about it properly. I no longer think that, but I still book the window."
 tags: [ideas, flying, small-preferences]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "What Losing Your Phone Abroad Actually Teaches"
-categories: [essays]
+categories: [opinion]
 excerpt: "Nineteen hours without a phone in a city I didn't know. It was the most present I'd been on the entire trip."
 tags: [ideas, technology, presence]
 ---
