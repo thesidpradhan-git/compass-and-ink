@@ -12,13 +12,9 @@ permalink: /essays/
 <section class="wrap">
   {% assign essay_posts = site.posts | where_exp: "p", "p.categories contains 'essays'" %}
   {% if essay_posts.size > 0 %}
-  <div class="post-grid" style="padding-top: 2.5rem;">
+  <div class="post-list">
     {% for post in essay_posts %}
-      {% if forloop.first %}
-        {% include post-card.html post=post size="featured" %}
-      {% else %}
-        {% include post-card.html post=post size="regular" %}
-      {% endif %}
+      {% include post-card.html post=post size="regular" %}
     {% endfor %}
   </div>
   {% else %}

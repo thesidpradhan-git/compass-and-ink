@@ -1,5 +1,5 @@
 <footer class="site-footer">
-  <div class="wrap site-footer__inner">
+  <div class="site-footer__inner">
     <div class="site-footer__col">
       <span class="site-logo__mark">{% include compass.html class="icon-compass" %}</span>
       <p class="site-footer__tag">{{ site.tagline }}</p>
@@ -18,7 +18,7 @@
       <a href="mailto:{{ site.email }}">Email</a>
     </div>
   </div>
-  <div class="wrap site-footer__legal">
+  <div class="site-footer__legal">
     <span>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.</span>
   </div>
 </footer>
@@ -38,4 +38,3 @@
     }
   })();
 </script>
-<script src="{{ '/assets/js/card-tilt.js' | relative_url }}" defer></script>

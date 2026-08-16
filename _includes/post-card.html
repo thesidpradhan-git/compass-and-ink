@@ -5,25 +5,25 @@
 {% if img_parts.size > 1 %}
   {% assign first_image = img_parts[1] | split: '"' | first %}
 {% endif %}
-<article class="post-card post-card--{{ size }} post-card--{{ cat }}">
-  <a class="post-card__link" href="{{ post.url | relative_url }}">
-    {% if first_image %}
-    <div class="post-card__art post-card__art--photo" style="--accent: {{ post.accent | default: '#c1502e' }}; --accent2: {{ post.accent2 | default: '#f3d9c4' }};">
-      <img src="{{ first_image }}" alt="" loading="lazy">
-      <span class="post-card__glyph">{{ post.glyph | default: "❖" }}</span>
-    </div>
-    {% else %}
-    <div class="post-card__art" style="--accent: {{ post.accent | default: '#c1502e' }}; --accent2: {{ post.accent2 | default: '#f3d9c4' }};">
-      <span class="post-card__glyph">{{ post.glyph | default: "❖" }}</span>
-    </div>
-    {% endif %}
-    <div class="post-card__body">
-      <span class="tag tag--{{ cat }}">{{ cat }}</span>
-      <h3 class="post-card__title">{{ post.title }}</h3>
-      <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-      <div class="post-card__meta">
+<article class="post-row post-row--{{ size }}">
+  <a class="post-row__link" href="{{ post.url | relative_url }}">
+    <div class="post-row__body">
+      <div class="post-row__meta-top">
+        <span class="tag tag--{{ cat }}">{{ cat }}</span>
+      </div>
+      <h3 class="post-row__title">{{ post.title }}</h3>
+      {% assign excerpt_text = post.excerpt | strip_html | strip %}
+      {% if excerpt_text != "" %}
+      <p class="post-row__excerpt">{{ excerpt_text | truncate: 140 }}</p>
+      {% endif %}
+      <div class="post-row__meta">
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
       </div>
     </div>
+    {% if first_image %}
+    <div class="post-row__thumb">
+      <img src="{{ first_image }}" alt="" loading="lazy">
+    </div>
+    {% endif %}
   </a>
 </article>

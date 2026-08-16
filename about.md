@@ -6,7 +6,7 @@ permalink: /about/
 <section class="about wrap wrap--narrow">
   <span class="tag tag--travel">About</span>
   <h1>Two notebooks, one bag.</h1>
-  <div class="post-content">
+  <div class="post-content" markdown="1">
 
 One notebook is for what happened: the bus that never came, the woman who fed me anyway, the way the light sits differently over a Portuguese roofline than it does anywhere else. That notebook becomes the **travel** pieces on this site — stories, mostly, told slowly, on the theory that a place deserves more than a listicle.
 
