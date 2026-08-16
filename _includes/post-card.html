@@ -7,6 +7,11 @@
 {% endif %}
 <article class="post-row post-row--{{ size }}">
   <a class="post-row__link" href="{{ post.url | relative_url }}">
+    {% if first_image %}
+    <div class="post-row__thumb">
+      <img src="{{ first_image }}" alt="" loading="lazy">
+    </div>
+    {% endif %}
     <div class="post-row__body">
       <div class="post-row__meta-top">
         <span class="tag tag--{{ cat }}">{{ cat }}</span>
@@ -22,10 +27,5 @@
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
       </div>
     </div>
-    {% if first_image %}
-    <div class="post-row__thumb">
-      <img src="{{ first_image }}" alt="" loading="lazy">
-    </div>
-    {% endif %}
   </a>
 </article>
