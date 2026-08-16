@@ -436,6 +436,75 @@ h1, h2, h3, h4 {
   display: block;
 }
 
+/* ---------- table of contents sidebar ---------- */
+.post-body-wrap {
+  position: relative;
+}
+
+.post-toc-wrap {
+  display: none;
+}
+
+@media (min-width: 1180px) {
+  .post-toc-wrap {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 14rem;
+    margin-left: 3rem;
+  }
+}
+
+.toc {
+  position: sticky;
+  top: 5.5rem;
+}
+
+.toc__label {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--color-ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.85rem;
+}
+
+.toc ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-left: 1px solid var(--color-line);
+}
+
+.toc__item a {
+  display: block;
+  padding-left: 0.9rem;
+  margin-left: -1px;
+  border-left: 2px solid transparent;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--color-ink-soft);
+  text-decoration: none;
+}
+
+.toc__item--h3 a {
+  padding-left: 1.7rem;
+  font-size: 0.82rem;
+}
+
+.toc__item a:hover { color: var(--color-ink); }
+
+.toc__item a.is-active {
+  color: var(--color-ink);
+  border-left-color: var(--color-ink);
+  font-weight: 500;
+}
+
 /* ---------- post content typography ---------- */
 .post-content {
   padding-top: clamp(1.5rem, 4vw, 2rem);

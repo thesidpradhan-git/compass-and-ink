@@ -15,7 +15,7 @@ layout: default
     </div>
   </header>
 
-  <div class="wrap wrap--narrow">
+  <div class="wrap wrap--narrow post-body-wrap">
     <div class="post-content">
       {{ content }}
     </div>
@@ -33,6 +33,10 @@ layout: default
         <p>Writes about places, and the beliefs found lying around in them. <a href="{{ '/about/' | relative_url }}">More about this project →</a></p>
       </div>
     </div>
+
+    <aside class="post-toc-wrap">
+      <nav id="toc" class="toc" aria-label="Table of contents"></nav>
+    </aside>
   </div>
 </article>
 
@@ -47,3 +51,5 @@ layout: default
   </div>
 </section>
 {% endif %}
+
+<script src="{{ '/assets/js/toc.js' | relative_url }}" defer></script>
