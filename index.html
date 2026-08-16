@@ -3,9 +3,12 @@ layout: default
 title: Home
 ---
 <section class="hero wrap">
-  <span class="hero__eyebrow">Dispatches &amp; arguments, since 2025</span>
-  <h1 class="hero__title">Notes from the road, and the <em>ideas</em> it wouldn't stop arguing with.</h1>
-  <p class="hero__lede">{{ site.description }}</p>
+  <canvas id="hero-scene" class="hero-scene" aria-hidden="true"></canvas>
+  <div class="hero__content">
+    <span class="hero__eyebrow">Dispatches &amp; arguments, since 2025</span>
+    <h1 class="hero__title">Notes from the road, and the <em>ideas</em> it wouldn't stop arguing with.</h1>
+    <p class="hero__lede">{{ site.description }}</p>
+  </div>
 </section>
 
 <section class="author-intro wrap">
@@ -62,3 +65,6 @@ title: Home
     <p>Nothing published yet — the first dispatch is on its way.</p>
   </section>
 {% endif %}
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
+<script src="{{ '/assets/js/hero-scene.js' | relative_url }}" defer></script>
