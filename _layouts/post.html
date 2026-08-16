@@ -9,9 +9,9 @@ layout: default
     {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
     <div class="post-meta">
       {% if page.location %}<span class="post-meta__location">{{ page.location }}</span><span aria-hidden="true">·</span>{% endif %}
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-      <span aria-hidden="true">·</span>
       <span>{{ content | number_of_words | divided_by: 200 | at_least: 1 }} min read</span>
+      <span aria-hidden="true">·</span>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
     </div>
   </header>
 
