@@ -40,7 +40,7 @@ layout: default
 {% if related.size > 0 %}
 <section class="related wrap wrap--narrow">
   <h2 class="related__heading">More {{ cat }} pieces</h2>
-  <div class="post-list">
+  <div class="post-list post-list--pair">
     {% for post in related %}
       {% include post-card.html post=post size="regular" %}
     {% endfor %}

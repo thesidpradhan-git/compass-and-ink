@@ -18,16 +18,15 @@ title: Home
 </section>
 
 {% if site.posts.size > 0 %}
-  <section class="wrap">
+  <section class="wrap--wide">
     <div class="post-list">
-      {% for post in site.posts limit: 12 %}
-        {% if forloop.first %}
-          {% include post-card.html post=post size="featured" %}
-        {% else %}
-          {% include post-card.html post=post size="regular" %}
-        {% endif %}
+      {% for post in site.posts limit: 8 %}
+        {% include post-card.html post=post size="regular" %}
       {% endfor %}
     </div>
+    {% if site.posts.size > 8 %}
+    <a class="see-more" href="{{ '/archive/' | relative_url }}">See more stories</a>
+    {% endif %}
   </section>
 {% else %}
   <section class="wrap empty-state">

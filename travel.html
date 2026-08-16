@@ -9,7 +9,7 @@ permalink: /travel/
   <p>Long-form dispatches from places that changed how the road looked afterward — written slow, on purpose.</p>
 </header>
 
-<section class="wrap">
+<section class="wrap--wide">
   {% assign travel_posts = site.posts | where_exp: "p", "p.categories contains 'travel'" %}
   {% if travel_posts.size > 0 %}
   <div class="post-list">

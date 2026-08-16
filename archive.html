@@ -1,0 +1,21 @@
+---
+layout: default
+title: All Posts
+permalink: /archive/
+---
+<header class="archive-header wrap">
+  <h1>Everything, in order.</h1>
+  <p>Every dispatch and every argument, newest first.</p>
+</header>
+
+<section class="wrap--wide">
+  {% if site.posts.size > 0 %}
+  <div class="post-list">
+    {% for post in site.posts %}
+      {% include post-card.html post=post size="regular" %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-state">Nothing published yet — the first dispatch is on its way.</p>
+  {% endif %}
+</section>
